@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location App</title>
+</head>
+<body>
+
+    <h1> location</h1>
+    <input type="text " id="locationiInput" placeholder="Enter Location">
+    <button id="addLocationButton"> Add Location</button>
+    <ul id="locationList"></ul>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #4CAF50;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+            width: 300px;
+        }
+
+        li {
+            background-color: #e7f3e7;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</body>
+
+<script>
+    document.getElementById('addLocationButton').addEventListener('click', function() {
+        const locationInput = document.getElementById('locationiInput');
+        const locationList = document.getElementById('locationList');
+
+        if (locationInput.value.trim() !== '') {
+            const listItem = document.createElement('li');
+            listItem.textContent = locationInput.value;
+            locationList.appendChild(listItem);
+            locationInput.value = '';
+        } else {
+            alert('Please enter a location.');
+        }
+    });
+</script>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Babac, Mary Mae-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Loan Survey - PHINMA UI</title>
+    <style>
+        body {
+            font-family: 'Verdana', sans-serif;
+            margin: 20px;
+            background-color: #e3f2fd; 
+            color: #0d47a1; 
+        }
+        form {
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 25px;
+            background: #ffffff; 
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        h1 {
+            text-align: center;
+            color: #0d47a1; 
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin: 12px 0 6px;
+            font-weight: bold;
+            color: #1565c0; 
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 18px;
+            border: 1px solid #90caf9; 
+            border-radius: 8px;
+            background-color: #e3f2fd; 
+            color: #0d47a1; 
+        }
+        input::placeholder, textarea::placeholder {
+            color: #64b5f6; 
+        }
+        button {
+            width: 100%;
+            padding: 14px;
+            background-color: #1976d2; 
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        button:hover {
+            background-color: #0d47a1; 
+            transform: scale(1.05);
+        }
+        textarea {
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+     <!--Babac, mary MAe-->
+    <form action="#" method="post">
+        <h1>Student Loan Survey</h1>
+        <p>Please fill out this survey to help us understand your experience with student loans at PHINMA UI.</p>
+        
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+        
+        <label for="year-level">Year Level:</label>
+        <select id="year-level" name="year-level" required>
+            <option value="" disabled selected>Select your year level</option>
+            <option value="1st Year">1st Year</option>
+            <option value="2nd Year">2nd Year</option>
+            <option value="3rd Year">3rd Year</option>
+            <option value="4th Year">4th Year</option>
+        </select>
+        
+        <label for="loan-usage">Have you availed of a student loan?</label>
+        <select id="loan-usage" name="loan-usage" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+        
+        <label for="satisfaction">How satisfied are you with the student loan process?</label>
+        <select id="satisfaction" name="satisfaction" required>
+            <option value="" disabled selected>Select your satisfaction level</option>
+            <option value="Very Satisfied">Very Satisfied</option>
+            <option value="Satisfied">Satisfied</option>
+            <option value="Neutral">Neutral</option>
+            <option value="Dissatisfied">Dissatisfied</option>
+            <option value="Very Dissatisfied">Very Dissatisfied</option>
+        </select>
+         <!--babac, mary mae-->
+        <label for="comments">Additional Comments:</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Share your thoughts or suggestions"></textarea>
+        
+        <button type="submit">Submit Survey</button>
+    </form>
+</body>
+</html>

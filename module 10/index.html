@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!---babac-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day10 Activity</title>
+    <style>
+        body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          background: linear-gradient(to right, #6a11cb, #2575fc);
+          text-align: center;
+          padding: 50px;
+          color: #fff;
+        }
+
+        .form-container {
+          background: rgba(255, 255, 255, 0.9);
+          padding: 30px;
+          border-radius: 15px;
+          width: 350px;
+          margin: auto;
+          box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+          color: #333;
+        }
+
+        label {
+          font-weight: bold;
+          display: block;
+          margin-bottom: 10px;
+          text-align: left;
+          color: #444;
+        }
+
+        select, input {
+          width: 90%;
+          padding: 12px;
+          margin-top: 8px;
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          font-size: 16px;
+          box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .submit-btn {
+          background: #ff5722;
+          color: white;
+          border: none;
+          padding: 12px;
+          width: 100%;
+          border-radius: 8px;
+          font-size: 18px;
+          font-weight: bold;
+          cursor: pointer;
+          margin-top: 20px;
+          transition: background 0.3s ease;
+        }
+
+        .submit-btn:hover {
+          background: #e64a19;
+        }
+        body {
+          background: #f4f4f4;
+          color: #333;
+        }
+
+        .form-container {
+          background: #fff;
+          border: 1px solid #ddd;
+          color: #333;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #322bff;
+            text-align: center;
+            padding: 50px;
+            color: rgb(18, 7, 80);
+        }
+
+        
+        .form-container {
+            background: rgb(143, 118, 118);
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            margin: auto;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            color: rgb(140, 189, 72);
+        }
+
+        
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+
+        
+        select, input {
+            width: 80%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /*button sa submit*/
+        .submit-btn {
+            background: #ff4b2b;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        
+        .submit-btn:hover {
+            background: #d84315;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>📍 INFORMATION</h2>
+
+        <label for="date">Name:</label>
+        <input type="text" id="txt" name="txt">
+
+        <label for="city">Select a City:</label>
+        <select id="city" name="city">
+            <option value="Iloilo City">Iloilo City</option>
+            <option value="Guimaras">Guimaras</option>
+            <option value="Roxas">Roxas</option>
+            <option value="Antique">Antique</option>
+        </select>
+
+        <br><br>
+
+        <label for="date">Select a Date:</label>
+        <input type="date" id="date" name="date">
+
+        <br><br>
+
+        <button class="submit-btn" onclick="showPopup()">Submit</button>
+    </div>
+
+    <script>
+        function showPopup() {
+            let txt = document.getElementById("txt").value;
+            let city = document.getElementById("city").value;
+            let date = document.getElementById("date").value;
+
+            if (txt && city && date) {
+                alert(`Names: ${txt}\nLocation Submitted: ${city}\nDate: ${date}`);
+            } else {
+                alert("Please fill in all fields before submitting.");
+            }
+        }
+    </script>
+
+</body>
+</html>
